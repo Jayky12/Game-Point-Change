@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="gamepointDataSet" targetNamespace="http://tempuri.org/gamepointDataSet.xsd" xmlns:mstns="http://tempuri.org/gamepointDataSet.xsd" xmlns="http://tempuri.org/gamepointDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="gamepointConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="gamepointConnectionString (MySettings)" PropertyReference="ApplicationSettings.Gamepoint.My.MySettings.GlobalReference.Default.gamepointConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="historyExTableAdapter" GeneratorDataComponentClassName="historyExTableAdapter" Name="historyEx" UserDataComponentName="historyExTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="gamepointConnectionString (MySettings)" DbObjectName="historyEx" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT PlayerID, username, PointID, GameID, CountPoint, [Date] FROM historyEx</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PlayerID" DataSetColumn="PlayerID" />
+              <Mapping SourceColumn="username" DataSetColumn="username" />
+              <Mapping SourceColumn="PointID" DataSetColumn="PointID" />
+              <Mapping SourceColumn="GameID" DataSetColumn="GameID" />
+              <Mapping SourceColumn="CountPoint" DataSetColumn="CountPoint" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="gamepointDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="gamepointDataSet" msprop:Generator_DataSetName="gamepointDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="historyEx" msprop:Generator_RowEvHandlerName="historyExRowChangeEventHandler" msprop:Generator_RowDeletedName="historyExRowDeleted" msprop:Generator_RowDeletingName="historyExRowDeleting" msprop:Generator_RowEvArgName="historyExRowChangeEvent" msprop:Generator_TablePropName="historyEx" msprop:Generator_RowChangedName="historyExRowChanged" msprop:Generator_RowChangingName="historyExRowChanging" msprop:Generator_TableClassName="historyExDataTable" msprop:Generator_RowClassName="historyExRow" msprop:Generator_TableVarName="tablehistoryEx" msprop:Generator_UserTableName="historyEx">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PlayerID" msprop:Generator_ColumnPropNameInRow="PlayerID" msprop:Generator_ColumnPropNameInTable="PlayerIDColumn" msprop:Generator_ColumnVarNameInTable="columnPlayerID" msprop:Generator_UserColumnName="PlayerID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="username" msprop:Generator_ColumnPropNameInRow="username" msprop:Generator_ColumnPropNameInTable="usernameColumn" msprop:Generator_ColumnVarNameInTable="columnusername" msprop:Generator_UserColumnName="username" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PointID" msprop:Generator_ColumnPropNameInRow="PointID" msprop:Generator_ColumnPropNameInTable="PointIDColumn" msprop:Generator_ColumnVarNameInTable="columnPointID" msprop:Generator_UserColumnName="PointID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GameID" msprop:Generator_ColumnPropNameInRow="GameID" msprop:Generator_ColumnPropNameInTable="GameIDColumn" msprop:Generator_ColumnVarNameInTable="columnGameID" msprop:Generator_UserColumnName="GameID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CountPoint" msprop:Generator_ColumnPropNameInRow="CountPoint" msprop:Generator_ColumnPropNameInTable="CountPointColumn" msprop:Generator_ColumnVarNameInTable="columnCountPoint" msprop:Generator_UserColumnName="CountPoint" type="xs:int" minOccurs="0" />
+              <xs:element name="Date" msprop:Generator_ColumnPropNameInRow="_Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_UserColumnName="Date" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
